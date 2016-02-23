@@ -1,10 +1,14 @@
 $body-bg: #ecf0f1;
 $navbar-default-bg: #3498db;
 $navbar-default-link-color: white;
-$navbar-default-link-hover-color: darken($navbar-default-link-color, 10%);
 $navbar-default-brand-color: white;
-$navbar-default-brand-hover-color: darken($navbar-default-brand-color, 10%);
+$navbar-default-brand-hover-color: white;
+$navbar-default-link-hover-color: white;
 $navbar-default-toggle-icon-bar-bg: #ecf0f1;
+
+$navbar-default-brand-hover-bg: darken($navbar-default-bg, 5%);
+$navbar-default-link-hover-bg: darken($navbar-default-bg, 5%);
+
 $jumbotron-bg: white;
 $btn-primary-bg: #3498db;
 @import 'bootstrap-sprockets';
