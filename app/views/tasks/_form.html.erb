@@ -21,21 +21,28 @@
   </div>
   <div class="field form-group">
     <%= f.label :start_date %><br>
-    <%= f.date_select :start_date, class: "form-control" %>
+    <%= f.text_field :start_date, class: "datepicker form-control" %>
   </div>
   <div class="field form-group">
     <%= f.label :finish_date %><br>
-    <%= f.date_select :finish_date, class: "form-control" %>
+    <%= f.text_field :finish_date, class: "datepicker form-control" %>
   </div>
   <div class="field form-group">
     <%= f.label :finished_date %><br>
-    <%= f.date_select :finished_date, class: "form-control" %>
+    <%= f.text_field :finished_date, class: "datepicker form-control" %>
   </div>
   <div class="field form-group">
     <%= f.label :finished %><br>
     <%= f.check_box :finished %>
   </div>
+
   <div class="actions">
     <%= f.submit class: "btn btn-primary"%>
   </div>
+
+	<script type="text/javascript">
+		  $(document).ready(function(){
+		    $('.datepicker').datepicker({format: "yyyy-mm-dd"}); 
+		  });
+	</script>
 <% end %>
