@@ -1,6 +1,12 @@
 <div class="jumbotron">
 	<div class="center">
-		<h1>Welcome to Tasqee</h1>
-		<h3>Please <%= link_to "log in", new_user_session_path, class: "btn btn-primary btn-lg" %></h3>
+		<% if user_signed_in? %>
+			<p>
+				Signed in
+			</p>
+		<% else %>
+			<h1>Welcome to Tasqee</h1>
+			<h3>Please <%= link_to "log in", new_user_session_path, class: "btn btn-primary btn-lg" %></h3>
+		<% end %>
 	</div>
 </div>
