@@ -25,7 +25,11 @@
         <td><%= task.finish_date %></td>
         <td><%= task.finished_date %></td>
         <td><%= task.finished %></td>
-        <td><%= task.file %></td>
+        <% if task.file.blank? %>
+        	<td>There's no attachment</td>	
+        <% else %>
+        	<td><%= link_to "Download", task.file.url(:original, false) %></td>
+        <% end %>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
